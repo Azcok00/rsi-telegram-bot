@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import numpy as np
 import time
+import os
 from datetime import datetime
 from telegram import Bot
 import ta
@@ -10,7 +11,7 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 
 # === DÁN BOT_TOKEN VÀ CHAT_ID VÀO ĐÂY ===
-BOT_TOKEN = '8413641827:AAFTPHd4DomgKsLniWkWPQEhDGHn2lgOiuA'  # ← DÁN TOKEN CỦA BẠN
+BOT_TOKEN = 'os.getenv('BOT_TOKEN')'  # ← DÁN TOKEN CỦA BẠN
 CHAT_ID = '6164373385'                              # ← DÁN CHAT_ID CỦA BẠN
 bot = Bot(token=BOT_TOKEN)
 
@@ -152,4 +153,5 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Lỗi: {e}")
         print("Ngủ 1 giờ...\n")
+
         time.sleep(3600)
