@@ -3,7 +3,6 @@ import requests
 import pandas as pd
 import numpy as np
 import time
-import os
 from datetime import datetime
 from telegram import Bot
 import ta
@@ -155,4 +154,5 @@ if __name__ == "__main__":
         print("Ngủ 1 giờ...\n")
 
         time.sleep(3600)
+
 
